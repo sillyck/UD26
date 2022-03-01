@@ -15,23 +15,21 @@ public class Venta {
 	Cajeros cajeros;
 	
 	@ManyToOne
-	@JoinColumn(name = "Maquinas_Registradoras")
-	Maquinas_Registradoras maquinas_Registradoras;
+	@JoinColumn(name = "Maquina")
+	Maquinas_Registradoras maquina;
 	
 	@ManyToOne
-	@JoinColumn(name = "Productos")
+	@JoinColumn(name = "Producto")
 	Productos productos;
 
 	public Venta() {
 		
 	}
 	
-	
-	public Venta(int iD, Cajeros cajeros, Maquinas_Registradoras maquinas_Registradoras, Productos productos) {
-		super();
+	public Venta(int iD, Cajeros cajeros, Maquinas_Registradoras maquina, Productos productos) {
 		ID = iD;
 		this.cajeros = cajeros;
-		this.maquinas_Registradoras = maquinas_Registradoras;
+		this.maquina = maquina;
 		this.productos = productos;
 	}
 
@@ -51,12 +49,12 @@ public class Venta {
 		this.cajeros = cajeros;
 	}
 
-	public Maquinas_Registradoras getMaquinas_Registradoras() {
-		return maquinas_Registradoras;
+	public Maquinas_Registradoras getMaquina() {
+		return maquina;
 	}
 
-	public void setMaquinas_Registradoras(Maquinas_Registradoras maquinas_Registradoras) {
-		this.maquinas_Registradoras = maquinas_Registradoras;
+	public void setMaquina(Maquinas_Registradoras maquina) {
+		this.maquina = maquina;
 	}
 
 	public Productos getProductos() {
@@ -69,8 +67,7 @@ public class Venta {
 
 	@Override
 	public String toString() {
-		return "Venta [cajeros=" + cajeros + ", maquinas_Registradoras=" + maquinas_Registradoras + ", productos="
-				+ productos + "]";
+		return "Venta [ID=" + ID + ", cajeros=" + cajeros + ", maquina=" + maquina + ", productos=" + productos + "]";
 	}
-	
+
 }

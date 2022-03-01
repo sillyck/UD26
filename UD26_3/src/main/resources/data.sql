@@ -12,7 +12,7 @@ create TABLE productos(
 
 create TABLE cajeros(
 	id int auto_increment,
-	NomApels varchar(100),
+	nom_apels varchar(100),
 	PRIMARY KEY (id)
 );
 
@@ -44,10 +44,10 @@ INSERT INTO productos (nombre, precio) values ('butaca',120);
 INSERT INTO productos (nombre, precio) values ('cochon',300);
 INSERT INTO productos (nombre, precio) values ('mesa',70);
 
-INSERT INTO cajeros (NomApels) values ('cajero1');
-INSERT INTO cajeros (NomApels) values ('cajero2');
-INSERT INTO cajeros (NomApels) values ('cajero3');
-INSERT INTO cajeros (NomApels) values ('cajero4');
+INSERT INTO cajeros (nom_apels) values ('cajero1');
+INSERT INTO cajeros (nom_apels) values ('cajero2');
+INSERT INTO cajeros (nom_apels) values ('cajero3');
+INSERT INTO cajeros (nom_apels) values ('cajero4');
 
 INSERT INTO maquinas_registradoras (piso) values (1);
 INSERT INTO maquinas_registradoras (piso) values (3);
