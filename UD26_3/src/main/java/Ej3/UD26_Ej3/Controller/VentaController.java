@@ -47,7 +47,7 @@ public class VentaController {
 		Ventas_seleccionado = ventaServiceImpl.VentasXID(Codigo);
 
 		Ventas_seleccionado.setCajeros(Ventas.getCajeros());
-		Ventas_seleccionado.setMaquinas_Registradoras(Ventas.getMaquinas_Registradoras());
+		Ventas_seleccionado.setMaquina(Ventas.getMaquina());
 		Ventas_seleccionado.setProductos(Ventas.getProductos());
 
 		Ventas_actualizado = ventaServiceImpl.actualizarVentas(Ventas_seleccionado);
